@@ -1,0 +1,27 @@
+.gsc-search-button{
+    margin-left: 0 !important;
+}
+table.gsc-search-box td.gsc-input{
+    padding-right: 0 !important;
+    width: 600px !important;
+}
+.search-container{
+    max-width: 700px;
+    margin: auto;
+}
+table.gsc-search-box{
+    border: 1px solid #000000 !important;
+    padding: 0 12px;
+    border-radius: 24px;
+    height: 48px;
+    font-size: 16px;
+}
+.gsc-input-box {
+    border: none !important;
+}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
+    background-color: gray !important;
+    border-radius: 18px !important;
+    padding: 8px 20px !important;
+    cursor: pointer;
+}
