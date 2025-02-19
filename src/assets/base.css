@@ -58,6 +58,10 @@
   font-weight: normal;
 }
 
+body,#app,html {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   transition:
@@ -81,4 +85,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: no-repeat url(https://s.ytimg.com/yt/imgbin/www-refreshbg-vflC3wnbM.png);
+  background-repeat: repeat;
 }
