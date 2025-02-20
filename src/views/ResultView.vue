@@ -1,20 +1,28 @@
 <template>
     <div class="my-container">
       <div class="search-container" id="searchContainer">
+        <div>
+          <a href="/">
+            <img src="@/assets/logo.png" style="height:33px;"/>
+          </a>
+        </div>
         <div class="gcse-searchbox"></div>
       </div>
       <div class="search-result-zone">
         <div class="gcse-searchresults" data-linkTarget="_blank" data-refinementStyle="link"></div>
       </div>
-      <footer>
-      </footer>
+      <Footer></Footer>
     </div>
   </template>
   
   <script>
+  import Footer from "@/components/footer.vue"
   export default {
     name: 'SearchPage',
     props: ['query'],
+    components:{
+      Footer
+    },
     mounted() {
       this.loadGoogleCSE();
       this.setupResultsRenderedCallback();  // 注册渲染结果回调函数
@@ -64,7 +72,17 @@
   };
   </script>
 <style scoped>
-.gsc-search-button{
-  margin-left: 0;
+.search-container{
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 40px;
+  margin-left: 60px;
+  div{
+    margin-right: 60px;
+  }
 }
+.gcse-searchbox{
+  margin-left: 40px;
+}
+
 </style> 

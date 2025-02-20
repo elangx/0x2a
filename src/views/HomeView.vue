@@ -3,7 +3,7 @@
       <div class="logo-container">
         <div></div>
         <div class="logo">
-          <img src="@/assets/0x2a.png" style="width: 200px;color:grey;"/>
+          <img src="@/assets/logo.png" style="height: 92px;"/>
         </div>
       </div>
       <div class="search-container">
@@ -11,16 +11,16 @@
           <div class="gcse-searchbox-only" data-resultsUrl="search"></div>
         </div>
       </div>
-      
-      <!-- 添加页脚 -->
-      <footer>
-        <p>dfdafdsfsf</p>
-      </footer>
+      <Footer></Footer> 
     </div>
   </template>
   
   <script>
+  import Footer from "@/components/footer.vue"
   export default {
+    components:{
+      Footer
+    },
     mounted() {
       const script = document.createElement('script');
       script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
@@ -52,7 +52,11 @@
   max-height: 290px;
 }
 .search-container{
+  padding: 20px;
   text-align: center;
   flex-grow: 1;
+}
+.search{
+  padding-top: 6px;
 }
 </style>

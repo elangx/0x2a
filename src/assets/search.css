@@ -20,10 +20,11 @@ table.gsc-search-box{
     border: none !important;
 }
 .gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
-    background-color: gray !important;
+    background-color: #FB5607 !important;
     border-radius: 18px !important;
     padding: 8px 20px !important;
     cursor: pointer;
+    border: none !important;
 }
 .gs-image-box{
     display: none;
@@ -67,5 +68,8 @@ table.gsc-search-box{
     font-weight: 450;
 }
 .gs-webResult div.gs-visibleUrl{
+    color: gray !important;
+}
+.gsst_a .gscb_a{
     color: gray !important;
 }
