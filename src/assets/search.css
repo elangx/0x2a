@@ -73,3 +73,6 @@ table.gsc-search-box{
 .gsst_a .gscb_a{
     color: gray !important;
 }
+.gsib_b{
+    display: none !important;
+}

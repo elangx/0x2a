@@ -39,7 +39,7 @@
       },
       setTitle() {
         var inputContent = document.getElementsByName('search')[0].value;
-        document.title = inputContent + ' - Luxirty Search'
+        document.title = inputContent + ' - 0x2a'
       },
       goHome() {
         // 使用 window.location.href 跳转到根路径
