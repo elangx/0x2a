@@ -26,6 +26,9 @@
       script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
       script.async = true;
       document.body.appendChild(script);
+      window.onload = function (){
+        document.getElementById("gsc-i-id1").focus();
+      }
     }
   };
   </script>
