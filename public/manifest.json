@@ -1,0 +1,19 @@
+{
+    "name": "0x2a",
+    "description": "0x2a search engine,based on google cse",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_icon": "android-chrome-192x192.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';",
+      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' https://cse.google.com https://www.google.com 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    },
+    "sandbox":{
+      "pages":["index.html"]
+    },
+    "chrome_url_overrides":{
+      "newtab":"sandbox.html"
+    }
+  }
