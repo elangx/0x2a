@@ -1,6 +1,6 @@
 <template>
           <footer class="footer">
-            <p>The answer to life, the universe, and everything</p>
+            <p>The Answer to the Ultimate Question of Life, the Universe, and Everything</p>
           </footer>
 </template>
 <style scoped>
