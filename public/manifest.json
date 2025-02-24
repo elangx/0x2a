@@ -8,10 +8,10 @@
     },
     "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self';",
-      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' https://cse.google.com https://www.google.com 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals;  child-src 'self';"
     },
     "sandbox":{
-      "pages":["index.html"]
+      "pages":["index.html", "search.html"]
     },
     "chrome_url_overrides":{
       "newtab":"sandbox.html"

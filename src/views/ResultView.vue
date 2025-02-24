@@ -17,13 +17,20 @@
   
   <script>
   import Footer from "@/components/footer.vue"
-  export default {
+export default {
     name: 'SearchPage',
-    props: ['query'],
+    props: ['query','googleCx'],
     components:{
       Footer
     },
     mounted() {
+      const script = document.createElement('script');
+      script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
+      if (this.googleCx) {
+        script.src = `https://cse.google.com/cse.js?cx=`+this.googleCx;
+      }
+      script.async = true;
+      document.body.appendChild(script);
       this.setupGoogleResultsRenderedCallback();  // 注册渲染结果回调函数
       if (!this.query) {
         this.goHome();
