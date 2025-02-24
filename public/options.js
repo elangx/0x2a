@@ -1,12 +1,12 @@
 // Saves options to chrome.storage
 const saveOptions = () => {
-    const googleCtx = document.getElementById('google_cse_ctx').value;
+    const googleCseCx = document.getElementById('google_cse_cx').value;
     chrome.storage.sync.set(
-      { googleCtx: googleCtx},
+      { googleCseCx: googleCseCx},
       () => {
         // Update status to let user know options were saved.
         const status = document.getElementById('status');
-        status.textContent = 'Options saved.'+googleCtx;
+        status.textContent = 'Options saved.'+googleCseCx;
         setTimeout(() => {
           status.textContent = '';
         }, 750);
@@ -19,7 +19,7 @@ const saveOptions = () => {
   const restoreOptions = () => {
     chrome.storage.sync.get(
       ['googleCseCx']).then((result)=>{
-        document.getElementById('google_cse_ctx').value = result.googleCtx
+        document.getElementById('google_cse_cx').value = result.googleCseCx
       })
   };
   

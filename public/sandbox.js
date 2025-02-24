@@ -10,12 +10,12 @@ window.onresize = function () {
 
 }
 
-chrome.storage.sync.get(['googleCtx']).then((result) => {
+chrome.storage.sync.get(['googleCseCx']).then((result) => {
     script = document.createElement('iframe');
     script.id = "theFrame"
     script.style = "border:none"
-    if (typeof result.googleCseCtx != "undefined")  {
-        script.src = "index.html?google_cse_cx="+result.googleCseCtx
+    if (typeof result.googleCseCx != "undefined")  {
+        script.src = "index.html?google_cse_cx="+result.googleCseCx
     } else {
         script.src = "index.html"
     }
