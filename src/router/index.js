@@ -8,12 +8,18 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: HomeView
+      component: HomeView,
+      props: route => ({
+        googleCseCx:route.query.google_cse_cx ?? import.meta.env.VITE_GOOGLE_CSE_CX
+      })
     },
     {
       path: '/index.html',
-      name: 'Home',
+      name: 'Index',
       component: HomeView,
+      props: route => ({
+        googleCseCx:route.query.google_cse_cx ?? import.meta.env.VITE_GOOGLE_CSE_CX
+      })
     },
     {
         path: '/search',
@@ -24,7 +30,7 @@ const router = createRouter({
         component: ResultView,
         props: route => ({
           query:route.query.q,
-          googleCx:route.query.google_cx
+          googleCseCx:route.query.google_cse_cx ?? import.meta.env.VITE_GOOGLE_CSE_CX
         })
     }
   ],

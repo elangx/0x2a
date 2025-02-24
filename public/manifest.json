@@ -11,9 +11,17 @@
       "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals;  child-src 'self';"
     },
     "sandbox":{
-      "pages":["index.html", "search.html"]
+      "pages":["index.html"]
     },
     "chrome_url_overrides":{
       "newtab":"sandbox.html"
+    },
+    "background":{
+      "service_worker":"service-work.js"
+    },
+    "permissions":["storage"],
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
     }
   }

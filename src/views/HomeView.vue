@@ -8,7 +8,7 @@
       </div>
       <div class="search-container">
         <div class="search">
-          <div class="gcse-searchbox-only" data-resultsUrl="https://0x2a.quest/search?cx=abcde"></div>
+          <div class="gcse-searchbox-only" :data-resultsUrl="`https://0x2a.quest/search?google_cse_cx=${this.googleCseCx}`"></div>
         </div>
       </div>
       <Footer></Footer> 
@@ -18,13 +18,14 @@
   <script>
   import Footer from "@/components/footer.vue"
   export default {
+    props:['googleCseCx'],
     components:{
       Footer
     },
     mounted() {
       const script = document.createElement('script');
-      script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
       script.async = true;
+      script.src = 'https://cse.google.com/cse.js?cx='+this.googleCseCx;
       document.body.appendChild(script);
       window.onload = function (){
         document.getElementById("gsc-i-id1").focus();

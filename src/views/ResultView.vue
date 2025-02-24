@@ -19,15 +19,15 @@
   import Footer from "@/components/footer.vue"
 export default {
     name: 'SearchPage',
-    props: ['query','googleCx'],
+    props: ['query','googleCseCx'],
     components:{
       Footer
     },
     mounted() {
       const script = document.createElement('script');
       script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
-      if (this.googleCx) {
-        script.src = `https://cse.google.com/cse.js?cx=`+this.googleCx;
+      if (this.googleCseCx) {
+        script.src = `https://cse.google.com/cse.js?cx=`+this.googleCseCx;
       }
       script.async = true;
       document.body.appendChild(script);
