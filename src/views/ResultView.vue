@@ -2,7 +2,7 @@
     <div class="my-container">
       <div class="search-container" id="searchContainer">
         <div>
-          <a href="/">
+          <a v-bind:href="this.googleCseCx ? '/?google_cse_cx='+this.googleCseCx : '/'">
             <img src="@/assets/logo.png" style="height:33px;"/>
           </a>
         </div>
@@ -43,7 +43,11 @@ export default {
       },
       goHome() {
         // 使用 window.location.href 跳转到根路径
-        window.location.href = '/';
+        let loc = '/'
+        if (this.googleCseCx) {
+          loc = `/?google_cse_cx=`+this.googleCseCx;
+        }
+        window.location.href = loc;
       },
       setupGoogleResultsRenderedCallback() {
         // 定义一个渲染回调函数，用于移除不需要的属性
