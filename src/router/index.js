@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ResultView from '../views/ResultView.vue'
+import IndexView from '../views/IndexView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,15 @@ const router = createRouter({
           query:route.query.q,
           googleCseCx:route.query.google_cse_cx ?? import.meta.env.VITE_GOOGLE_CSE_CX
         })
+    },
+    {
+      path: '/index',
+      name: 'test',
+      component: IndexView,
+      props: route => ({
+        googleCseCx:route.query.google_cse_cx ?? import.meta.env.VITE_GOOGLE_CSE_CX,
+        query:route.query.q
+      })
     }
   ],
 })

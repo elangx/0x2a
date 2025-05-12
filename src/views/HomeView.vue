@@ -8,7 +8,7 @@
       </div>
       <div class="search-container">
         <div class="search">
-          <div class="gcse-searchbox-only" :data-resultsUrl="`https://0x2a.quest/search?google_cse_cx=${this.googleCseCx}`"></div>
+          <div class="gcse-searchbox-only" :data-resultsUrl="`./index?google_cse_cx=${this.googleCseCx}`"></div>
         </div>
       </div>
       <Footer></Footer> 
